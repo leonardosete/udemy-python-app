@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: udemy-python-app
+spec:
+  selector:
+    app: udemy-python-app
+  ports:
+    - protocol: TCP
+      port: 8880
+      targetPort: 5000

@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: udemy-python-app
+spec:
+  rules:
+  - host: "udemy-python-app.test.com"
+    http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: udemy-python-app
+              port:
+                number: 8880
